@@ -5,10 +5,16 @@ const PrimeChecker = function() {
 };
 
 PrimeChecker.prototype.bindEvents = function () {
-  PubSub.subscribe('NumberInputView:number-submitted', (event) => {
+  console.log("namnana 1");
+
+  PubSub.subscribe('FormView:number-submitted', (event) => {
+    console.log("namnana 2");
     const inputtedNumber = event.detail;
-    const result = this.numberIsPrime(inputtedNumber);
-    PubSub.publish('PrimeChecker:result-calculated', result);
+    const isPrime = this.numberIsPrime(inputtedNumber);
+
+
+
+    PubSub.publish('PrimeChecker:result-calculated', isPrime);
   });
 };
 
