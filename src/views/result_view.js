@@ -7,9 +7,9 @@ const ResultView = function(){
 ResultView.prototype.displayResult = function( boolResult ) {
   let result;
   if (boolResult === true) {
-    result = "Yes, number is prime";
+    result = "Yes, this is a prime number";
   } else {
-    result = "No, number is not prime"
+    result = "No, this is not a prime number"
   }
 
   const resultElement = document.querySelector("#result");
